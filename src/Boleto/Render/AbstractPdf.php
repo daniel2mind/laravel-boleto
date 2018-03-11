@@ -16,8 +16,15 @@ abstract class AbstractPdf extends \FPDF
     public function Footer()
     {
         $this->SetY(-20);
-        if (count($this->PageGroups)) {
-            $this->Cell(0, 6, 'Boleto '.$this->GroupPageNo().'/'.$this->PageGroupAlias(), 0, 0, 'C');
+        try
+        {
+            if (count($this->PageGroups)) {
+                $this->Cell(0, 6, 'Boleto '.$this->GroupPageNo().'/'.$this->PageGroupAlias(), 0, 0, 'C');
+            }
+        }
+        catch(\Exception $e)
+        {
+            //
         }
     }
 
