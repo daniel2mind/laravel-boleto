@@ -12,4 +12,6 @@
 Fork do projeto [laravel-boleto](https://github.com/eduardokum/laravel-boleto)
 <br />
 
+### Instalação
 
+composer require daniel2mind/laravel-boleto:dev-master
